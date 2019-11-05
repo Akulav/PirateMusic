@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+	"name": "Pirating is good",
+	"description": "Plays pirate music when well, you pirate...",
+	"version": "0",
+	"author": "Akulav",
+	"icons": {
+		"16": "images/icons/16.png",
+		"19": "images/icons/19.png",
+		"38": "images/icons/38.png",
+		"64": "images/icons/64.png",
+		"128": "images/icons/128.png"
+	},
+	"web_accessible_resources": [
+		"note.mp3"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"https://rutracker.net/*",
+				"https://thepiratebay.org/*"
+			],
+			"js": [
+				"cont.js"
+			]
+		}
+	]
+}
